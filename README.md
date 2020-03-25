@@ -1,9 +1,11 @@
-# 这是一个websocket的简单示例
+### 这是一个websocket的简单示例
 c#服务端：https://github.com/statianzo/Fleck
 web客户端：https://github.com/gimite/web-socket-js/
 
-# server
-1、继承自EasyConnectionHandle
+#### server
+##### 1、继承自EasyConnectionHandle
+``` csharp
+
 public class SampleHandle : EasyConnectionHandle
     {
         public override void OnClose()
@@ -18,13 +20,21 @@ public class SampleHandle : EasyConnectionHandle
         {
         }
     }
-2、启动服务
+    
+```
+
+##### 2、启动服务
+``` c#
+
 EasyWebSocketServer.CreateServer()
             .MapHandle<SampleHandle>("/simple")
             .WithFlashPoliy()
             .Start();
+            
+```
+#### client
+``` javascript
 
-# client
 <script src="easy.websocket.js"></script>
 <script type="text/javascript">
     var websocket = new EasyWebSocket();
@@ -37,3 +47,5 @@ EasyWebSocketServer.CreateServer()
     websocket.onError = function () {
     };
 </script>
+
+```
