@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWebSocket", "EasyWebSocket\EasyWebSocket.csproj", "{76ABAD91-8BCB-42F2-ACE7-C007064ACDCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FD2C1234-25DB-46D5-B8B5-E1F2062E0CDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWebSocket.Web", "EasyWebSocket.Web\EasyWebSocket.Web.csproj", "{A91808BB-688B-405B-A318-DB0DCA390E2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76ABAD91-8BCB-42F2-ACE7-C007064ACDCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76ABAD91-8BCB-42F2-ACE7-C007064ACDCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76ABAD91-8BCB-42F2-ACE7-C007064ACDCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76ABAD91-8BCB-42F2-ACE7-C007064ACDCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A91808BB-688B-405B-A318-DB0DCA390E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A91808BB-688B-405B-A318-DB0DCA390E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A91808BB-688B-405B-A318-DB0DCA390E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A91808BB-688B-405B-A318-DB0DCA390E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{76ABAD91-8BCB-42F2-ACE7-C007064ACDCA} = {FD2C1234-25DB-46D5-B8B5-E1F2062E0CDB}
+		{A91808BB-688B-405B-A318-DB0DCA390E2C} = {FD2C1234-25DB-46D5-B8B5-E1F2062E0CDB}
+	EndGlobalSection
+EndGlobal

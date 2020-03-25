@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <ul style="list-style:none;" id="ulMsg"></ul>
+    <input type="text" value="" id="txtMsg" /> <button type="button" onclick="sendMsg();">send</button>
+
+    <script src="easy.websocket.js"></script>
+    <script type="text/javascript">
+        var websocket = new EasyWebSocket();
+        websocket.start("ws://127.0.0.1:12345/simple");
+
+        websocket.onOpen = function () {
+            writeMsg('opened');
+        };
+        websocket.onClose = function () {
+            writeMsg('closed');
+        };
+        websocket.onError = function () {
+
+        };
+
+        websocket.test = function (name, msg) {
+            writeMsg(name + ':' + msg);
+        };
+
+        websocket.testJson = function (p, msg) {
+            writeMsg("json-"+p.Name + ':' + msg);
+        };
+
+        function sendMsg() {
+            var msg = document.getElementById('txtMsg').value;
+            websocket.send('test', 'lucy', 18, msg);
+            //websocket.send('testJson', { name: 'lucy', age: 18 }, msg);
+            writeMsg(msg);
+        }
+
+        function writeMsg(msg) {
+            var li = document.createElement('li');
+            li.innerHTML = msg;
+            document.getElementById('ulMsg').appendChild(li);
+        }
+    </script>
+</body>
+</html>
